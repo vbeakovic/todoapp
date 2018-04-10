@@ -5,3 +5,7 @@ This is a node.js project that is part of the [Projects in ExpressJS Video](http
 # Differences
 
 * Using yarn instead of bower
+* to connect to MongoDB had to change the sintax
+
+  * from db = database;
+  * to  db = database.db('todoapp');
