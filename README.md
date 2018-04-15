@@ -13,3 +13,5 @@ This is a node.js project that is part of the [Projects in ExpressJS Video](http
 
   * from db = database;
   * to  db = database.db('todoapp');
+
+* Out of curiosity I have replaced the alert with a bootstrap modal as the delete confirmation
