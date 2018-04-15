@@ -1,0 +1,14 @@
+<% include ../views/partials/header %>
+<h1>Test</h1>
+  <form action="/todo/edit/<%= todo._id %>" method="post">
+    <div>
+      <label for="text">Todo Name</label>
+      <input type="text" name="text" value="<%= todo.text %>">
+    </div>
+    <div>
+      <label for="body">Todo Body</label>
+      <textarea name="body"><%= todo.body %></textarea>
+    </div>
+    <button type="submit">Submit</button> <a href="/">Cancel</a>
+  </form>
+<% include ../views/partials/footer %>
