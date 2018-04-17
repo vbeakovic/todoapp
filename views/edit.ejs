@@ -1,14 +1,19 @@
 <% include ../views/partials/header %>
-<h1>Test</h1>
-  <form action="/todo/edit/<%= todo._id %>" method="post">
-    <div>
-      <label for="text">Todo Name</label>
-      <input type="text" name="text" value="<%= todo.text %>">
+  <div class="row">
+    <div class="col-md-6">
+      <form action="/todo/edit/<%= todo._id %>" method="post">
+        <div class="form-group">
+          <label for="text">Todo Name</label>
+          <input class="form-control" type="text" name="text" value="<%= todo.text %>">
+        </div>
+        <div class="form-group">
+          <label for="body">Todo Body</label>
+          <textarea class="form-control" name="body"><%= todo.body %></textarea>
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <a class="btn btn-danger" href="/">Cancel</a>
+      </form>
     </div>
-    <div>
-      <label for="body">Todo Body</label>
-      <textarea name="body"><%= todo.body %></textarea>
-    </div>
-    <button type="submit">Submit</button> <a href="/">Cancel</a>
-  </form>
+  </div>
 <% include ../views/partials/footer %>
